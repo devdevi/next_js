@@ -158,33 +158,42 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
     super(...args);
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "render", () => __jsx("div", {
-      className: "jsx-3959019723",
+      className: "jsx-1121443157",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 2
       },
       __self: this
     }, __jsx("h1", {
-      className: "jsx-3959019723",
+      className: "jsx-1121443157",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 2
       },
       __self: this
     }, "Hola Consorcio!"), __jsx("p", {
-      className: "jsx-3959019723",
+      className: "jsx-1121443157",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 3
       },
       __self: this
-    }, "Bienvenido al curos de next.js"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      id: "3250082913",
+    }, "Bienvenido al curos de next.js"), __jsx("img", {
+      src: "/logo-movie.png",
+      alt: "Logo",
+      className: "jsx-1121443157",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 4
+      },
       __self: this
-    }, "h1.jsx-3959019723{color:red;}p{color:green;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aXNha2FkZXZpL0Rlc2t0b3AvZGV2ZWxvcC9uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlnQixBQUdtQixBQUdBLFVBRmQsRUFHQSIsImZpbGUiOiIvVXNlcnMvdmlzYWthZGV2aS9EZXNrdG9wL2RldmVsb3AvbmV4dC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICByZW5kZXIgPSAoKSA9PiA8ZGl2PjxoMT5Ib2xhIENvbnNvcmNpbyE8L2gxPlxuICAgIDxwPkJpZW52ZW5pZG8gYWwgY3Vyb3MgZGUgbmV4dC5qczwvcD5cblxuICAgIDxzdHlsZSBqc3g+e2BcbiAgICBoMSB7XG4gICAgICAgIGNvbG9yOiByZWQ7XG4gICAgfVxuICAgIDpnbG9iYWwocCl7XG4gICAgICBjb2xvcjogZ3JlZW47XG4gICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgIGJvZHkge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgICA8L2Rpdj5cblxufVxuIl19 */\n/*@ sourceURL=/Users/visakadevi/Desktop/develop/next/pages/index.js */"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      id: "736459491",
+    }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      id: "2941907906",
       __self: this
-    }, "body{background-color:yellow;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aXNha2FkZXZpL0Rlc2t0b3AvZGV2ZWxvcC9uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVl1QixBQUdpQyx3QkFDNUIiLCJmaWxlIjoiL1VzZXJzL3Zpc2FrYWRldmkvRGVza3RvcC9kZXZlbG9wL25leHQvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBjbGFzcyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gICAgcmVuZGVyID0gKCkgPT4gPGRpdj48aDE+SG9sYSBDb25zb3JjaW8hPC9oMT5cbiAgICA8cD5CaWVudmVuaWRvIGFsIGN1cm9zIGRlIG5leHQuanM8L3A+XG5cbiAgICA8c3R5bGUganN4PntgXG4gICAgaDEge1xuICAgICAgICBjb2xvcjogcmVkO1xuICAgIH1cbiAgICA6Z2xvYmFsKHApe1xuICAgICAgY29sb3I6IGdyZWVuO1xuICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICBib2R5IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xuICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPC9kaXY+XG5cbn1cbiJdfQ== */\n/*@ sourceURL=/Users/visakadevi/Desktop/develop/next/pages/index.js */")));
+    }, "h1.jsx-1121443157{color:red;}div.jsx-1121443157 p{color:green;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aXNha2FkZXZpL0Rlc2t0b3AvZGV2ZWxvcC9uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU9nQixBQUdtQixBQUdBLFVBRmQsRUFHQSIsImZpbGUiOiIvVXNlcnMvdmlzYWthZGV2aS9EZXNrdG9wL2RldmVsb3AvbmV4dC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICByZW5kZXIgPSAoKSA9PiA8ZGl2PjxoMT5Ib2xhIENvbnNvcmNpbyE8L2gxPlxuICAgIDxwPkJpZW52ZW5pZG8gYWwgY3Vyb3MgZGUgbmV4dC5qczwvcD5cbiAgICA8aW1nXG4gICAgc3JjPVwiL2xvZ28tbW92aWUucG5nXCJcbiAgICBhbHQ9XCJMb2dvXCIvPlxuXG4gICAgPHN0eWxlIGpzeD57YFxuICAgIGgxIHtcbiAgICAgICAgY29sb3I6IHJlZDtcbiAgICB9XG4gICAgZGl2IDpnbG9iYWwocCl7XG4gICAgICBjb2xvcjogZ3JlZW47XG4gICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgIGJvZHkge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB9XG4gICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuXG59XG4iXX0= */\n/*@ sourceURL=/Users/visakadevi/Desktop/develop/next/pages/index.js */"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      id: "3646336510",
+      __self: this
+    }, "body{background-color:white;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aXNha2FkZXZpL0Rlc2t0b3AvZGV2ZWxvcC9uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWV1QixBQUdnQyx1QkFDM0IiLCJmaWxlIjoiL1VzZXJzL3Zpc2FrYWRldmkvRGVza3RvcC9kZXZlbG9wL25leHQvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBjbGFzcyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gICAgcmVuZGVyID0gKCkgPT4gPGRpdj48aDE+SG9sYSBDb25zb3JjaW8hPC9oMT5cbiAgICA8cD5CaWVudmVuaWRvIGFsIGN1cm9zIGRlIG5leHQuanM8L3A+XG4gICAgPGltZ1xuICAgIHNyYz1cIi9sb2dvLW1vdmllLnBuZ1wiXG4gICAgYWx0PVwiTG9nb1wiLz5cblxuICAgIDxzdHlsZSBqc3g+e2BcbiAgICBoMSB7XG4gICAgICAgIGNvbG9yOiByZWQ7XG4gICAgfVxuICAgIGRpdiA6Z2xvYmFsKHApe1xuICAgICAgY29sb3I6IGdyZWVuO1xuICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICBib2R5IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgICA8L2Rpdj5cblxufVxuIl19 */\n/*@ sourceURL=/Users/visakadevi/Desktop/develop/next/pages/index.js */")));
   }
 
 });

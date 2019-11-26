@@ -1,5 +1,13 @@
 export default class extends React.Component {
+    static async getInitialProps({ query }) {
+        let idChannel = query.id;
+        let req = await fetch(`https://api.audioboom.com/channels/${idChannel}`)
+        let { body: { channel } } = await req.json()
+        return { channel }
+      }
+
     render() {
-        return <h1> Vista Canal</h1>
+        const { channel } = this.props;
+        return <h1> { channel.title }</h1>
     }
 }

@@ -1,51 +1,55 @@
 import Link from 'next/link';
 export default class extends React.Component {
-    static async getInitialProps({ query }) {
-        let idChannel = query.id;
-      // Acemos todas las peticiones el orden que pasamos arriba
-        let [reqChannel, reqSeries, reqAudios ] = await  Promise.all([
-          fetch(`https://api.audioboom.com/channels/${idChannel}`),
-          fetch( `https://api.audioboom.com/channels/${idChannel}/child_channels`),
-          fetch(`https://api.audioboom.com/channels/${idChannel}/audio_clips`)]
-        )
+  static async getInitialProps({ query }) {
+    let idChannel = query.id;
+    // Acemos todas las peticiones el orden que pasamos arriba
+    let [reqChannel, reqSeries, reqAudios] = await Promise.all([
+      fetch(`https://api.audioboom.com/channels/${idChannel}`),
+      fetch(`https://api.audioboom.com/channels/${idChannel}/child_channels`),
+      fetch(`https://api.audioboom.com/channels/${idChannel}/audio_clips`)]
+    )
 
-        // let { body: { channel } } = await req.json()
-        let dataChannel= await reqChannel.json()
-        let channel = dataChannel.body.channel
+    // let { body: { channel } } = await req.json()
+    let dataChannel = await reqChannel.json()
+    let channel = dataChannel.body.channel
 
-        // let { body: { channel } } = await reqAudio.json()
-        let dataAudio = await reqAudios.json()
-        let audioClips = dataAudio.body.audio_clips
+    // let { body: { channel } } = await reqAudio.json()
+    let dataAudio = await reqAudios.json()
+    let audioClips = dataAudio.body.audio_clips
 
-        // let { body: { channel } } = await reqAudio.json()
-        let dataSeries = await reqSeries.json()
-        let series = dataSeries.body.channels
+    // let { body: { channel } } = await reqAudio.json()
+    let dataSeries = await reqSeries.json()
+    let series = dataSeries.body.channels
 
-        return { channel, audioClips, series }
-    }
+    return { channel, audioClips, series }
+  }
 
-    render() {
-        const { channel, audioClips, series } = this.props;
-        return <div>
-            <header>Podcasts</header>
-            {/* jsx */}
-            <div className="channels">
-                <h2>{channel.title}</h2>
-            </div>
-          <h3>Series</h3>
-          { series.map((serie) => (
-            <div className="m-2"> {serie.title }</div>
-          ))}
-          <h3>Podcasts</h3>
-          { audioClips.map((clip) => (
-            <Link href={`/podcasts?id=${ clip.id }`} prefetch>
-            <a className="m-2 blue" key={ clip.id }> {clip.title }
-              <div> {clip.id} </div>
-            </a>
-            </Link>
-          ))}
+  render() {
+    const { channel, audioClips, series } = this.props;
+    return <div>
+      <header>Podcasts</header>
+      {/* jsx */}
+      <div className="channels">
+        <h2>{channel.title}</h2>
+      </div>
+      <h3>Podcasts</h3>
+      <ul>
+        {audioClips.map((clip) => (
+          <Link href={`/podcasts?id=${clip.id}`} prefetch>
+            <li>
+              <a className="m-2 blue" key={clip.id}>
+                {clip.title}
+              </a>
+            </li>
+          </Link>
+        ))}
+      </ul>
+      <h3>Series</h3>
+      {series.map((serie) => (
+        <div className="m-2"> {serie.title}</div>
+      ))}
 
-            <style jsx>{`
+      <style jsx>{`
         header {
           color: #fff;
           background: #171614;
@@ -53,7 +57,9 @@ export default class extends React.Component {
           text-align: center;
         }
         .m-2{
-          margin: 2rem;
+          margin: 1rem;
+          padding: .5rem;
+          cursor: pointer;
         }
         .blue{
           color: blue;
@@ -84,13 +90,13 @@ export default class extends React.Component {
         }
       `}</style>
 
-        <style jsx global>{`
+      <style jsx global>{`
             body {
             margin: 0;
             font-family: system-ui;
             background: white;
             }
       `}</style>
-        </div>
-    }
+    </div>
+  }
 }

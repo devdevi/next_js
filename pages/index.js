@@ -13,8 +13,13 @@ export default class extends React.Component {
     // Destructuring
     const { channels } = this.props
 
+    return  <Layout title="Podcast">
+      <channelGrid channels={ channels }/>
+
+    </Layout>
+
     return <div>
-      <header>Podcasts</header>
+     
       {/* jsx */}
       <div className="channels">
         { channels.map((channel) => (

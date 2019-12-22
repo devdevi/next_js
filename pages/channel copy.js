@@ -1,22 +1,19 @@
-import Link from 'next/link';
 export default class extends React.Component {
     static async getInitialProps({ query }) {
         let idChannel = query.id;
-      // Acemos todas las peticiones el orden que pasamos arriba
-        let [reqChannel, reqSeries, reqAudios ] = await  Promise.all([
-          fetch(`https://api.audioboom.com/channels/${idChannel}`),
-          fetch( `https://api.audioboom.com/channels/${idChannel}/child_channels`),
-          fetch(`https://api.audioboom.com/channels/${idChannel}/audio_clips`)]
-        )
-
+        let reqChannel = await fetch(`https://api.audioboom.com/channels/${idChannel}`)
         // let { body: { channel } } = await req.json()
         let dataChannel= await reqChannel.json()
         let channel = dataChannel.body.channel
 
+        let reqAudios = await fetch(`
+          https://api.audioboom.com/channels/${idChannel}/audio_clips
+        `)
         // let { body: { channel } } = await reqAudio.json()
         let dataAudio = await reqAudios.json()
         let audioClips = dataAudio.body.audio_clips
 
+        let reqSeries = await fetch( `https://api.audioboom.com/channels/${idChannel}/child_channels`)
         // let { body: { channel } } = await reqAudio.json()
         let dataSeries = await reqSeries.json()
         let series = dataSeries.body.channels
@@ -34,29 +31,18 @@ export default class extends React.Component {
             </div>
           <h3>Series</h3>
           { series.map((serie) => (
-            <div className="m-2"> {serie.title }</div>
+            <div> {serie.title }</div>
           ))}
-          <h3>Podcasts</h3>
           { audioClips.map((clip) => (
-            <Link href={`/podcasts?id=${ clip.id }`} prefetch>
-            <a className="m-2 blue" key={ clip.id }> {clip.title }
-              <div> {clip.id} </div>
-            </a>
-            </Link>
+            <div> {clip.title }</div>
           ))}
 
             <style jsx>{`
         header {
           color: #fff;
-          background: #171614;
+          background: #8756ca;
           padding: 15px;
           text-align: center;
-        }
-        .m-2{
-          margin: 2rem;
-        }
-        .blue{
-          color: blue;
         }
         .channels {
           display: grid;

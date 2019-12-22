@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default class extends React.Component {
 
   static async getInitialProps() {
-    let req = await fetch('https://api.audioboom.com/channels/recommended')
+    let req = await fetch('https://api.audioboom.com/channels/recommended?category_ids[]=179')
     let { body: channels } = await req.json()
     return { channels }
   }
@@ -30,7 +30,7 @@ export default class extends React.Component {
       <style jsx>{`
         header {
           color: #fff;
-          background: #8756ca;
+          background: #171614;
           padding: 15px;
           text-align: center;
         }

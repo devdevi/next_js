@@ -6,13 +6,14 @@ import Error from 'next/error';
 
 export default class extends React.Component {
 
-  static async getInitialProps() {
+  static async getInitialProps({res}) {
    try {
     let req = await fetch('https://api.audioboom.com/channels/recommended?category_ids[]=179')
     let { body: channels } = await req.json()
     return { channels, statusCode: 200 }
   } catch(e) {
-      return { channels: null, statusCode: 503 }
+      res.statusCode = 503
+      return { channels: null, statusCode: res.statusCode }
     }
   }
 

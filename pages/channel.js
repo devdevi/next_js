@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import PodcastsList from '../components/PodcastList';
-import Error from 'next/error'
+import Error from './_error'
 export default class extends React.Component {
   static async getInitialProps({ query, res}) {
     let idChannel = query.id;
@@ -12,7 +12,8 @@ export default class extends React.Component {
           fetch(`https://api.audioboom.com/channels/${idChannel}/child_channels`),
           fetch(`https://api.audioboom.com/channels/${idChannel}/audio_clips`)]
         )
-        if (reqChannel.status >= 404 ){
+        if (reqChannel.status >= 400 ){
+          res.statusCode = reqChannel.status
           return { channel: null, audioClips: null, series: null, statusCode: reqChannel.status}
         }
 
